@@ -1,17 +1,16 @@
 Package: patterncausality
 Type: Package
 Title: Pattern Causality Algorithm
-Version: 0.2.1
-Authors@R: c( person("Stavros", "Stavroglou", role = c("aut"),
+Version: 0.2.4
+Authors@R: c( person("Stavros", "Stavroglou", role = c("aut", "cre"),
                      email = "stavros.k.stavroglou@gmail.com",
                      comment = c(ORCID = "0000-0003-3931-0391")),
               person("Athanasios", "Pantelous", role = c("aut"),
                      email = "Athanasios.Pantelous@monash.edu",
                      comment = c(ORCID = "0000-0001-5738-1471")),
-              person("Hui", "Wang", role = c("aut", "cre"), 
+              person("Hui", "Wang", role = c("aut"),
                      email = "huiw1128@gmail.com",
                      comment = c(ORCID = "0009-0006-0095-0243")))
-Maintainer: Hui Wang <huiw1128@gmail.com>
 Description: A comprehensive package for detecting and analyzing causal relationships in complex systems using pattern-based approaches. Key features include state space reconstruction, pattern identification, and causality strength evaluation.
 License: GPL-3 | file LICENSE
 Depends: R (>= 4.1.0)
@@ -36,7 +35,7 @@ Suggests:
     testthat (>= 3.0.0),
     lintr,
     zoo,
-    graphics,
+    graphics
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
