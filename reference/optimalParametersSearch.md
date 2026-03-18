@@ -114,7 +114,7 @@ optimalParams <- optimalParametersSearch(
 print(optimalParams)
 #> Pattern Causality Parameter Optimization Results
 #> ---------------------------------------------
-#> Computation time: 14.41919 secs 
+#> Computation time: 14.13847 secs 
 #> 
 #> Parameters tested:
 #>   Emax: 3 

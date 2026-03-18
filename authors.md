@@ -2,14 +2,14 @@
 
 ## Authors
 
-- **[Stavros Stavroglou](https://www.stavroglou.com)**. Author.
-  [](https://orcid.org/0000-0003-3931-0391)
+- **[Stavros Stavroglou](https://www.stavroglou.com)**. Author,
+  maintainer. [](https://orcid.org/0000-0003-3931-0391)
 
 - **[Athanasios
   Pantelous](https://research.monash.edu/en/persons/athanasios-pantelous)**.
   Author. [](https://orcid.org/0000-0001-5738-1471)
 
-- **[Hui Wang](https://huiw.org)**. Author, maintainer.
+- **[Hui Wang](https://huiw.org)**. Author.
   [](https://orcid.org/0009-0006-0095-0243)
 
 ## Citation
