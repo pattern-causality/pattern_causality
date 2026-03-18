@@ -6,16 +6,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Dynamic Analysis: Pattern Causality in Time Points • patterncausality</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" sizes="any" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Source_Sans_Pro-0.4.9/font.css" rel="stylesheet">
-<link href="../deps/Source_Code_Pro-0.4.9/font.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Source_Sans_Pro-0.4.10/font.css" rel="stylesheet">
+<link href="../deps/Source_Code_Pro-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Dynamic Analysis: Pattern Causality in Time Points">
@@ -55,7 +54,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/skstavroglou/pattern_causality/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/pattern-causality/pattern_causality/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -73,7 +72,7 @@
 Stavroglou, Athanasios Pantelous, Hui Wang</h4>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/skstavroglou/pattern_causality/blob/main/vignettes/dynamic.Rmd" class="external-link"><code>vignettes/dynamic.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/pattern-causality/pattern_causality/blob/main/vignettes/dynamic.Rmd" class="external-link"><code>vignettes/dynamic.Rmd</code></a></small>
       <div class="d-none name"><code>dynamic.Rmd</code></div>
     </div>
 
@@ -88,7 +87,7 @@ between two series.</p>
 <p>First of all, we need to load the package and the dataset as
 usual.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/skstavroglou/pattern_causality/" class="external-link">patterncausality</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/pattern-causality/pattern_causality/" class="external-link">patterncausality</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">climate_indices</span><span class="op">)</span></span></code></pre></div>
 <p>Here we choose the typical climate dataset to show the dynamic
 analysis. We can easily get the pattern causality result by
@@ -125,11 +124,11 @@ time point if and only if the causality is one of the three types, so
 the each time point just has one causality.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_causality.html">plot_causality</a></span><span class="op">(</span><span class="va">result</span>, type<span class="op">=</span><span class="st">"total"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="dynamic_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
+<p><img src="dynamic_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" alt="" width="700"></p>
 <p>We can also plot the causality strength seperately.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_causality.html">plot_causality</a></span><span class="op">(</span><span class="va">result</span>, type<span class="op">=</span><span class="st">"positive"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="dynamic_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
+<p><img src="dynamic_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" alt="" width="700"></p>
 <p>Then it will show the single causality strength series of each status
 to observe the dynamic causality, since each time point just has one
 causality, so we use the linear interpolation to connect the points of
@@ -158,7 +157,7 @@ also provide the plot function for this situation to find more details
 about the dynamic causality.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_causality.html">plot_causality</a></span><span class="op">(</span><span class="va">result</span>, type<span class="op">=</span><span class="st">"total"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="dynamic_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
+<p><img src="dynamic_files/figure-html/unnamed-chunk-8-1.png" class="r-plt" alt="" width="700"></p>
 <p>Then the causality strength in this situation is just 1 and 0, that’s
 why the figure is the bar plot, we can find the causality type in each
 time point and we can also obverse different causality in different time
@@ -180,7 +179,7 @@ the features in different time points and different causalities.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
   </div></footer>
