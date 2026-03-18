@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/patterncausality)](https://cran.r-project.org/package=patterncausality)
-[![R-CMD-check](https://github.com/skstavroglou/pattern_causality/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/skstavroglou/pattern_causality/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/pattern-causality/pattern_causality/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/pattern-causality/pattern_causality/actions/workflows/R-CMD-check.yaml)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/patterncausality)](https://cran.r-project.org/package=patterncausality)
 
 <!-- badges: end -->
@@ -55,11 +55,11 @@ This algorithm has a lot of advantages.
 ## Installation
 
 You can install the development version of patterncausality from
-[GitHub](https://github.com/skstavroglou/pattern_causality) with:
+[GitHub](https://github.com/pattern-causality/pattern_causality) with:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("skstavroglou/pattern_causality")
+devtools::install_github("pattern-causality/pattern_causality")
 ```
 
 You can also install the package from
@@ -144,7 +144,7 @@ the pattern causality.
 
 <a href="mailto:stavros.k.stavroglou@gmail.com">
 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/envelope.svg" width="40" height="40"/>
-</a> <a href="https://github.com/skstavroglou">
+</a> <a href="https://github.com/leoxeno">
 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/github.svg" width="40" height="40"/>
 </a> <a href="https://orcid.org/0000-0003-3931-0391">
 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/orcid.svg" width="40" height="40"/>

@@ -42,8 +42,8 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 Config/Needs/website:
     tidyverse/tidytemplate
-URL: https://github.com/skstavroglou/pattern_causality/
-BugReports: https://github.com/skstavroglou/pattern_causality/issues
+URL: https://github.com/pattern-causality/pattern_causality/
+BugReports: https://github.com/pattern-causality/pattern_causality/issues
 Config/testthat/edition: 3
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
