@@ -29,6 +29,7 @@ First, we import stock data for Apple (AAPL) and Microsoft (MSFT). You
 can also import data using the **yahooo** API.
 
 ``` r
+
 library(patterncausality)
 data(DJS)
 head(DJS)
@@ -95,6 +96,7 @@ demonstrates how to search for these parameters using the
 by default due to the time it may take).
 
 ``` r
+
 dataset <- DJS[,-1]
 parameter <- optimalParametersSearch(Emax = 5, tauMax = 5, metric = "euclidean", dataset = dataset)
 ```
@@ -105,6 +107,7 @@ After determining the parameters, we can calculate the causality between
 the two series.
 
 ``` r
+
 X <- DJS$Apple
 Y <- DJS$Microsoft
 pc <- pcLightweight(X, Y, E = 3, tau = 2, metric = "euclidean", h = 1, weighted = TRUE)
@@ -126,12 +129,14 @@ Finally, we can visualize the results to better understand the causal
 relationships using the `plot_total` and `plot_components` functions.
 
 ``` r
+
 plot_total(pc)
 ```
 
 ![](patterncausality_files/figure-html/unnamed-chunk-6-1.png)
 
 ``` r
+
 plot_components(pc)
 ```
 
@@ -147,6 +152,7 @@ For more detailed causality information, use the `pcFullDetails`
 function.
 
 ``` r
+
 X <- DJS$Apple
 Y <- DJS$Microsoft
 detail <- pcFullDetails(X, Y, E = 3, tau = 2, metric = "euclidean", h = 1, weighted = TRUE)
@@ -177,6 +183,7 @@ rather than absolute changes 2. The time series have different scales or
 units 3. You’re interested in the relative importance of changes
 
 ``` r
+
 # Example with both weighted and relative TRUE
 pc_rel_weighted <- pcLightweight(X, Y, E = 3, tau = 2, metric = "euclidean", 
                                h = 1, weighted = TRUE, relative = TRUE)

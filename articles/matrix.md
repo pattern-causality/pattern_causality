@@ -39,6 +39,7 @@ complex system to demonstrate the capabilities of our multivariate
 pattern causality analysis.
 
 ``` r
+
 library(patterncausality)
 data(DJS)
 #head(DJS)
@@ -51,6 +52,7 @@ influence the accuracy and reliability of the results. We use the
 `optimalParametersSearch` function to identify these optimal values:
 
 ``` r
+
 dataset <- DJS[,-1] # remove the date column
 params <- optimalParametersSearch(
   Emax = 3, 
@@ -68,6 +70,7 @@ the causality between all pairs of time series in the dataset, resulting
 in a matrix representation of the system’s causal structure.
 
 ``` r
+
 result <- pcMatrix(
   dataset = dataset, 
   E = 3,           # Embedding dimension
@@ -83,6 +86,7 @@ different aspect of causality: positive, negative, and dark causality.
 These matrices can be accessed through the `pc_matrix` object.
 
 ``` r
+
 print(result)
 #> Pattern Causality Matrix Analysis:
 #> 
@@ -141,6 +145,7 @@ separately, we can gain a deeper understanding of the system’s dynamics.
 - Positive causality status
 
 ``` r
+
 plot(result, "positive")
 ```
 
@@ -149,6 +154,7 @@ plot(result, "positive")
 - Negative causality status
 
 ``` r
+
 plot(result, "negative")
 ```
 
@@ -157,6 +163,7 @@ plot(result, "negative")
 - Dark causality status
 
 ``` r
+
 plot(result, "dark")
 ```
 
@@ -173,6 +180,7 @@ aggregates the causality measures to provide a system-wide perspective
 on the overall impact of pattern causality.
 
 ``` r
+
 effects <- pcEffect(result)
 print(effects)
 #> Pattern Causality Effect Analysis
@@ -282,6 +290,7 @@ system.
 - Positive causality status
 
 ``` r
+
 plot(effects, status="positive")
 ```
 
@@ -290,6 +299,7 @@ plot(effects, status="positive")
 - Negative causality status
 
 ``` r
+
 plot(effects, status="negative")
 ```
 
@@ -298,6 +308,7 @@ plot(effects, status="negative")
 - Dark causality status
 
 ``` r
+
 plot(effects, status="dark")
 ```
 
@@ -314,6 +325,7 @@ each series in X to Y.
 This time we construct the datasets for X and Y in stock dataset.
 
 ``` r
+
 dataset <- DJS[, -1]
 
 X <- dataset[, 1:10]
@@ -324,6 +336,7 @@ Then we can estimate the causality matrix from each series in X to Y and
 give the new matrix from X to Y.
 
 ``` r
+
 result_cross <- pcCrossMatrix(
   X = X,
   Y = Y,
@@ -340,6 +353,7 @@ The new matrix will be saved in the `result_cross` object, we can also
 plot the matrix by the `plot` function.
 
 ``` r
+
 plot(result_cross, "positive")
 ```
 

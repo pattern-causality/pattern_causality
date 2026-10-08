@@ -10,6 +10,7 @@ package to analyze the dynamic causality between two series.
 First of all, we need to load the package and the dataset as usual.
 
 ``` r
+
 library(patterncausality)
 data(climate_indices)
 ```
@@ -22,6 +23,7 @@ obtained by the whole time points.
 ## Causality Strength Analysis with ERF Function
 
 ``` r
+
 X <- climate_indices$AO
 Y <- climate_indices$AAO
 result <- pcLightweight(X, Y, E = 3, tau = 1, metric = "euclidean", h = 1, weighted = TRUE, verbose=FALSE)
@@ -35,6 +37,7 @@ To get the causality strength in each time point, we need the recorded
 function `pcFullDetails` to give causality strength details.
 
 ``` r
+
 result <- pcFullDetails(X, Y, E = 3, tau = 1, metric = "euclidean", h = 1, weighted = TRUE, verbose=FALSE)
 print(result)
 #> Pattern Causality Full Analysis
@@ -54,6 +57,7 @@ only if the causality is one of the three types, so the each time point
 just has one causality.
 
 ``` r
+
 plot_causality(result, type="total")
 ```
 
@@ -62,6 +66,7 @@ plot_causality(result, type="total")
 We can also plot the causality strength seperately.
 
 ``` r
+
 plot_causality(result, type="positive")
 ```
 
@@ -79,6 +84,7 @@ raw causality strength series, we can estimate the causality again by
 the `pcFullDetails` function.
 
 ``` r
+
 result <- pcFullDetails(X, Y, E = 3, tau = 1, metric = "euclidean", h = 1, weighted = FALSE, verbose=FALSE)
 print(result)
 #> Pattern Causality Full Analysis
@@ -96,6 +102,7 @@ also provide the plot function for this situation to find more details
 about the dynamic causality.
 
 ``` r
+
 plot_causality(result, type="total")
 ```
 

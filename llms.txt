@@ -39,6 +39,7 @@ You can install the development version of patterncausality from
 [GitHub](https://github.com/pattern-causality/pattern_causality) with:
 
 ``` r
+
 # install.packages("devtools")
 devtools::install_github("pattern-causality/pattern_causality")
 ```
@@ -47,6 +48,7 @@ You can also install the package from
 [CRAN](https://CRAN.R-project.org/package=patterncausality) with:
 
 ``` r
+
 install.packages("patterncausality")
 ```
 
@@ -57,6 +59,7 @@ install.packages("patterncausality")
 We can import the existing data.
 
 ``` r
+
 library(patterncausality)
 data(climate_indices)
 head(climate_indices)
@@ -82,6 +85,7 @@ First of all, we need to determine the `E` and `tao`, it could be easy
 to complete by `optimalParametersSearch` function like this:
 
 ``` r
+
 dataset <- climate_indices[, -1] # remove the date column
 parameter <- optimalParametersSearch(Emax = 3, tauMax = 3, metric = "euclidean", dataset = dataset)
 print(parameter)
@@ -114,6 +118,7 @@ After the parameters are confirmed, we could calculate the pattern
 causality.
 
 ``` r
+
 X <- climate_indices$AO
 Y <- climate_indices$AAO
 pc <- pcLightweight(X, Y, E = 3, tau = 1, metric = "euclidean", h = 1, weighted = TRUE, verbose = FALSE)
@@ -136,6 +141,7 @@ to present the causality strength, however, whatever which one is used,
 the total causality points will be the same.
 
 ``` r
+
 X <- climate_indices$AO
 Y <- climate_indices$AAO
 detail <- pcFullDetails(X, Y, E = 3, tau = 1, metric = "euclidean", h = 1, weighted = TRUE, verbose = FALSE)
@@ -221,6 +227,7 @@ Monash Business School and is the author and maintainer of the
 There are currently no downstream dependencies for this package
 
 ``` r
+
 # Example with relative parameter (default is TRUE)
 pc <- pcLightweight(X, Y, E = 3, tau = 1, metric = "euclidean", h = 1, 
                    weighted = TRUE, relative = TRUE, verbose = FALSE)

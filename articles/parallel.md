@@ -30,6 +30,7 @@ Let’s explore how parallel computing can enhance the performance of
 different pattern causality analyses:
 
 ``` r
+
 library(patterncausality)
 data(climate_indices)
 ```
@@ -37,6 +38,7 @@ data(climate_indices)
 ### Create test data
 
 ``` r
+
 X <- climate_indices$PNA
 Y <- climate_indices$NAO
 ```
@@ -44,6 +46,7 @@ Y <- climate_indices$NAO
 ### Function to measure execution time
 
 ``` r
+
 run_cv_test <- function(n_cores) {
     start_time <- Sys.time()
     result <- pcCrossValidation(
@@ -68,6 +71,7 @@ run_cv_test <- function(n_cores) {
 ## Compare sequential vs parallel
 
 ``` r
+
 time_seq <- run_cv_test(1)
 time_par <- run_cv_test(parallel::detectCores() - 1)
 
@@ -82,6 +86,7 @@ When analyzing causality between multiple time series, parallel
 computing can significantly reduce computation time:
 
 ``` r
+
 # Create larger test dataset
 n_series <- 20
 n_points <- 1000
@@ -137,6 +142,7 @@ cat("Speed-up factor:", as.numeric(time_seq) / as.numeric(time_par), "x\n")
 #### Best Practices for Optimal Performance
 
 ``` r
+
 # Get available cores
 n_cores <- parallel::detectCores()
 # Use n_cores - 1 for computation

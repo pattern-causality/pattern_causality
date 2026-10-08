@@ -25,6 +25,7 @@ To demonstrate the application of cross-validation, we will begin by
 importing a climate dataset from the `patterncausality` package.
 
 ``` r
+
 library(patterncausality)
 data(climate_indices)
 ```
@@ -34,6 +35,7 @@ causality. We will use the Pacific North American (PNA) and North
 Atlantic Oscillation (NAO) climate indices as our example time series.
 
 ``` r
+
 set.seed(123)
 X <- climate_indices$PNA
 Y <- climate_indices$NAO
@@ -188,6 +190,7 @@ To better visualize the results, we will use the `plot` function to
 generate a line chart.
 
 ``` r
+
 plot(result)
 ```
 
@@ -209,6 +212,7 @@ parameter is set to `FALSE`. This approach uses a systematic sampling
 method rather than random sampling.
 
 ``` r
+
 set.seed(123)
 X <- climate_indices$PNA
 Y <- climate_indices$NAO
@@ -255,6 +259,7 @@ print(result_non_random$results)
 We can also visualize the results of the non-random cross-validation:
 
 ``` r
+
 plot(result_non_random)
 ```
 
@@ -273,6 +278,7 @@ with replacement and provides statistical summaries of the causality
 measures.
 
 ``` r
+
 set.seed(123)
 X <- climate_indices$PNA
 Y <- climate_indices$NAO
@@ -298,6 +304,7 @@ measure - Median: Central tendency measure robust to outliers
 Let’s examine the results:
 
 ``` r
+
 print(result_boot$results)
 #> , , positive
 #> 
@@ -331,6 +338,7 @@ We can visualize the bootstrap results using the plot function, which
 now shows confidence intervals:
 
 ``` r
+
 plot(result_boot, separate = TRUE)
 ```
 

@@ -19,7 +19,7 @@ Source:
 
 Wang H, Stavroglou S, Pantelous A (2024). “patterncausality: Pattern
 Causality Algorithm in R.”
-[doi:10.2139/ssrn.4966221](https://doi.org/10.2139/ssrn.4966221),
+[doi:10.2139/ssrn.4966221](https://doi.org/10.2139/ssrn.4966221).
 Available at SSRN, <https://www.ssrn.com/abstract=4966221>.
 
     @Unpublished{,

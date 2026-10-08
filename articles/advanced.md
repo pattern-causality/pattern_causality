@@ -30,6 +30,7 @@ be useful when dealing with data that has varying scales or
 distributions.
 
 ``` r
+
 adaptive_distance <- function(x) {
   if(!is.matrix(x)) x <- as.matrix(x)
   # Ensure no NA values
@@ -65,6 +66,7 @@ filter to reduce noise in the time series before constructing the state
 space.
 
 ``` r
+
 denoised_state_space <- function(x, E, tau) {
   # Use median filtering for denoising
   n <- length(x)
@@ -101,6 +103,7 @@ function. We’ll load the `climate_indices` dataset and apply our custom
 functions.
 
 ``` r
+
 library(patterncausality)
 data(climate_indices)
 
@@ -154,6 +157,7 @@ In the first example, we use the `adaptive_distance` function as the
 Finally, let’s compare the results obtained using the custom functions.
 
 ``` r
+
 # Compare results
 compare_results <- data.frame(
   Method = c("Adaptive Distance", "Denoised Space"),
